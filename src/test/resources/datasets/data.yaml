@@ -1,0 +1,6 @@
+email_entity:
+  - id: 1
+    mail: lucifer@hell.org
+  - id: 2
+    mail: michael@heaven.org
+    

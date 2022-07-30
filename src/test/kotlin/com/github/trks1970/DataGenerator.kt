@@ -33,6 +33,7 @@ class DataGenerator {
         outputName = "src/test/resources/datasets/data.yaml",
         dependentTables = true
     )
+
     fun exportData() {
         emailRepository.saveAll(
             listOf(
