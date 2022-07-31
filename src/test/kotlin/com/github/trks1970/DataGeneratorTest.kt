@@ -17,7 +17,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
     ]
 )
 @DBRider
-@DBUnit(caseSensitiveTableNames = true, escapePattern = "\"?\"")
+@DBUnit(caseSensitiveTableNames = true, escapePattern = "\"?\"", schema = "PUBLIC")
 class DataGeneratorTest {
     @Autowired
     lateinit var emailRepository: EmailRepository
