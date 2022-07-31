@@ -32,10 +32,10 @@ class DataGeneratorTest {
     fun exportData() {
         emailRepository.saveAll(
             listOf(
-                EmailEntity(null, "lucifer@hell.org"),
-                EmailEntity(null, "gabriel@heaven.org"),
-                EmailEntity(null, "michael@heaven.org"),
-                EmailEntity(null, "raphael@heaven.org")
+                EmailEntity(1, "lucifer@hell.org"),
+                EmailEntity(2, "gabriel@heaven.org"),
+                EmailEntity(3, "michael@heaven.org"),
+                EmailEntity(4, "raphael@heaven.org")
             )
         )
     }
