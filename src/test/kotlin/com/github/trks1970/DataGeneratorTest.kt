@@ -4,7 +4,6 @@ import com.github.database.rider.core.api.configuration.DBUnit
 import com.github.database.rider.core.api.dataset.DataSetFormat
 import com.github.database.rider.core.api.exporter.ExportDataSet
 import com.github.database.rider.junit5.api.DBRider
-import org.junit.jupiter.api.Tag
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.extension.ExtendWith
 import org.springframework.beans.factory.annotation.Autowired
@@ -19,15 +18,14 @@ import org.springframework.test.context.junit.jupiter.SpringExtension
 )
 @DBRider
 @DBUnit(caseSensitiveTableNames = true, escapePattern = "\"?\"")
-@Tag("datasetExport")
-class DataGenerator {
+class DataGeneratorTest {
     @Autowired
     lateinit var emailRepository: EmailRepository
 
     @Test
     @ExportDataSet(
         format = DataSetFormat.YML,
-        outputName = "src/test/resources/datasets/data.yaml",
+        outputName = "src/test/resources/datasets/test_data.yaml",
         dependentTables = true
     )
 

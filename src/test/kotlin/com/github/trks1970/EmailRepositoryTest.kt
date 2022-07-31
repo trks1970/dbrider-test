@@ -25,7 +25,7 @@ class EmailRepositoryTest {
 
     @Test
     fun testFindAll() {
-        assertThat(emailRepository.findAll()).isEqualTo(4)
+        assertThat(emailRepository.findAll()).hasSize(4)
     }
 
     @Test
@@ -37,7 +37,7 @@ class EmailRepositoryTest {
     @Test
     fun testInsert() {
         emailRepository.save(
-            EmailEntity(null, "uriel@heaven.org")
+            EmailEntity(1000, "uriel@heaven.org")
         )
         assertThat(emailRepository.findAll().size).isEqualTo(5)
     }
